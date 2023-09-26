@@ -15,16 +15,16 @@ namespace Lab2Prob3
             */
             int numar = int.Parse(Console.ReadLine());
 
-            if (IsPrime(numar))
+            if (NrPrim(numar))
             {
-                Console.WriteLine("este un număr prim."+ numar);
+                Console.WriteLine(numar + " este un număr prim. ");
             }
             else
             {
-                Console.WriteLine("nu este un număr prim."+ numar);
+                Console.WriteLine(numar + " nu este un număr prim. ");
             }
         }
-        static bool IsPrime(int num)
+        static bool NrPrim(int num)
         {
             if (num <= 1)
             {
