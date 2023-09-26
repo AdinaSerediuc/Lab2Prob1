@@ -12,20 +12,25 @@ namespace Lab2Prob2
              * Ex 2
           Scrieti o functie care va determina daca un numar este sau nu palindrom.
           */
-            string cuvant = string.Parse(Console.ReadLine());
+            string cuvant = "radar";
             int lungime = cuvant.Length;
+            bool estePalindrom;
 
-            for (int i = 0; i < lungime % 2; i++)
+            for (int i = 0; i < lungime / 2; i++)
             {
-                if (cuvant[i] <= cuvant[lungime - 1 - i]) ;
+                if (cuvant[i] != cuvant[lungime - 1 - i]);
                 {
-
-                    Console.WriteLine("Cuvantul nu este palindrom" + cuvant);
+                    estePalindrom = false;
+                    //break;
+                }
+                 if (estePalindrom == true)
+                {
+                    Console.WriteLine("Cuvantul este palindrom:" + cuvant);
                 }
                 else
-                { Console.WriteLine("Cuvantul este palindrom:" + cuvant);
+                {
+                    Console.WriteLine(cuvant + " nu este un cuvânt palindrom.");
                 }
-            }
 
             }
         }
